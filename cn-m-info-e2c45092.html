@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九游 · 不止游戏的角落</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f2f4;
+            font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: #2c3e50;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 760px;
+            width: 100%;
+        }
+
+        /* 文章卡片容器 */
+        .card {
+            background-color: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e6e9ed;
+            padding: 2rem 2.2rem;
+            margin-bottom: 1.8rem;
+        }
+
+        /* hero 区域 — 简约引言 */
+        .hero {
+            margin-bottom: 2.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1a2634;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #687282;
+            border-left: 4px solid #b0c4d9;
+            padding-left: 1rem;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #dce2e8, transparent);
+            margin: 1.8rem 0;
+        }
+
+        /* 内容正文 */
+        .content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .inset-quote {
+            background: #f5f7fa;
+            border-left: 3px solid #7f8fa6;
+            border-radius: 0 10px 10px 0;
+            padding: 1rem 1.4rem;
+            margin: 1.6rem 0;
+            font-style: normal;
+            color: #3a4a5c;
+            font-size: 0.95rem;
+        }
+
+        .inset-quote::before {
+            content: "💬 ";
+            font-size: 1.1rem;
+        }
+
+        .faq-mini {
+            background-color: #f8f9fb;
+            border-radius: 14px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.6rem 0 0.6rem 0;
+            border: 1px solid #eef1f4;
+        }
+
+        .faq-mini .q {
+            font-weight: 500;
+            color: #1e2b39;
+            margin-bottom: 0.4rem;
+            font-size: 1rem;
+        }
+
+        .faq-mini .a {
+            color: #4a5a6e;
+            font-size: 0.95rem;
+        }
+
+        .access-line {
+            background-color: #eef2f6;
+            border-radius: 30px;
+            padding: 1rem 1.6rem;
+            margin: 2rem 0 0.6rem 0;
+            text-align: left;
+            font-size: 1rem;
+            border: 1px solid #dce1e8;
+            transition: background 0.2s ease;
+        }
+
+        .access-line strong {
+            font-weight: 600;
+            color: #1f2c3c;
+        }
+
+        .access-line a {
+            color: #1f6390;
+            text-decoration: none;
+            border-bottom: 1px dashed #b0c8de;
+            font-weight: 500;
+        }
+
+        .access-line a:hover {
+            border-bottom-style: solid;
+            color: #0f4870;
+        }
+
+        /* 点缀标签 */
+        .meta-tag {
+            display: inline-block;
+            background: #e9edf2;
+            color: #3d4f62;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.9rem;
+            border-radius: 20px;
+            letter-spacing: 0.02em;
+            margin-right: 0.5rem;
+            border: 1px solid #d4dbe4;
+        }
+
+        .footer-note {
+            text-align: center;
+            color: #7c8a9a;
+            font-size: 0.85rem;
+            margin-top: 2.6rem;
+            border-top: 1px solid #dde3ea;
+            padding-top: 1.6rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 560px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .access-line {
+                padding: 0.9rem 1.2rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 文章卡片：主体内容 -->
+    <article class="card">
+
+        <div class="hero">
+            <h1>游戏以外的散步</h1>
+            <div class="sub">从一款社区平台说起<br>—— 九游与它带来的日常连接</div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="content">
+            <p>
+                几年前第一次点开九游，我并没有把它当作一个游戏门户。那时候更多是被社区里细碎的讨论吸引——有人分享某关卡的解法，有人在深夜发帖聊剧情，还有人只是默默上传了自己的像素涂鸦。渐渐地，我发现这片角落好像并不急于推销什么，而更像一个安静的客厅，玩家可以进来坐坐，翻翻杂志，或者什么都不做。
+            </p>
+            <p>
+                后来我才意识到，这种温和的氛围并不常见。大多数游戏平台总带着紧迫感——活动倒计时、战力排行、必须完成的任务。而九游在保留基础服务的同时，似乎刻意留出了一片“非游戏”的空间。你能找到关于关卡设计的闲聊，也能遇见对某段背景音乐的讨论。这些内容不功利，却恰好构成了许多人留下来理由。
+            </p>
+
+            <!-- 引用提示 -->
+            <div class="inset-quote">
+                一位经常在深夜逛九游论坛的用户说过：“有时候不为了玩游戏，只是想去看看今天又有什么奇怪话题。”
+            </div>
+
+            <p>
+                这也让我想起一个场景：周末下午，泡一杯茶，打开九游随便翻翻。没有非打不可的副本，没有必须领取的奖励。也许看看热评里的吐槽，也许收藏一张玩家画的同人图，或者点开某个冷门游戏的文章，读一读开发背后的故事。那种节奏，有些像翻阅一本老杂志。
+            </p>
+            <p>
+                当然，作为一个伴随许多人成长的平台，九游也汇聚了大量实用的内容：游戏攻略、版本更新解读、礼包福利。只是它的表达方式并不喧哗，更像一个朋友在你耳边说“这个技巧或许有用”，而不是用弹窗逼你立即行动。这种分寸感，让资讯和放松得以共存。
+            </p>
+
+            <!-- 特点 + 场景 融合段落 -->
+            <p>
+                如果非要总结它的特点，我会说：九游懂得留白。它不会让信息塞满每一寸屏幕，也不会用夸张的标题绑架注意力。卡片式的信息流、清淡的配色、不频繁的推送——这些细节组合起来，构成了一种“可呼吸”的体验。适合那些不想被算法追赶，只想顺着兴趣慢慢浏览的人。
+            </p>
+
+            <!-- FAQ 摘要（简洁） -->
+            <div class="faq-mini">
+                <div class="q">❓ 九游只提供游戏相关的内容吗？</div>
+                <div class="a">并不尽然。除了游戏库与攻略，你还能找到用户创作、杂谈、怀旧系列等轻内容。它的气质更像一个混搭社区，游戏是主线，但不排斥任何有趣的支线。</div>
+            </div>
+
+            <!-- 嵌入链接的访问句 -->
+            <div class="access-line">
+                <span class="meta-tag">日常</span>
+                如果你也喜欢这种不疾不徐的节奏，不妨去 <strong><a href="https://cn-m-9games.com">九游</a></strong> 逛一逛。也许无意间，就能发现一段属于你的宁静角落。
+            </div>
+
+        </div>
+    </article>
+
+    <!-- 第二张卡片：额外随笔（保持层次） -->
+    <div class="card" style="padding: 1.5rem 2rem;">
+        <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #4a5b6d;">
+            <span style="font-weight: 500;">写在后头：</span> 人们常常谈论“沉浸感”，但沉浸不一定只发生在游戏里。一个社区如果能让你放下目的，单纯地停留片刻，那也是一种珍贵的沉浸。九游恰好提供了这样一种可能。
+        </p>
+        <p style="margin-top: 0.8rem; font-size: 0.9rem; color: #677a8b;">
+            —— 来自一个普通浏览者的笔记 · 2025年初
+        </p>
+    </div>
+
+    <div class="footer-note">
+        慢下来 · 看自己想看的
+    </div>
+
+</div>
+</body>
+</html>
